@@ -2,19 +2,22 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class AddressBook {
-    Collection<BuddyInfo> addressBook = new ArrayList<BuddyInfo>();
+    Collection<BuddyInfo> collection = new ArrayList<BuddyInfo>();
 
-    public void addBuddy(String name, String address, String phone) {
-        BuddyInfo buddyInfo = new BuddyInfo(name, address, phone);
-        addressBook.add(buddyInfo);
+    public void addBuddy(BuddyInfo buddyInfo) {
+
+        collection.add(buddyInfo);
     }
 
-    public void removeBuddy(String name) {
-        addressBook.removeIf(buddyInfo -> buddyInfo.getName().equals(name));
+    public void removeBuddy(BuddyInfo buddyInfo) {
+        collection.removeIf(buddyInfo1 -> buddyInfo1.equals(buddyInfo));
     }
 
     public static void main(String[] args){
-        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
 }
 
