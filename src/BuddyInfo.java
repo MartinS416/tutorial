@@ -5,7 +5,8 @@ public class BuddyInfo {
         this.address = address;
         this.phone = phone;
     }
-
+    //change made on branch
+    //changes made on branch
     public String getName() {
         return name;
     }
