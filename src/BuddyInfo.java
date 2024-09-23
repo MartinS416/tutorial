@@ -1,5 +1,5 @@
 public class BuddyInfo {
-
+    //test change made on github
     public BuddyInfo(String name, String address, String phone) {
         this.name = name;
         this.address = address;
